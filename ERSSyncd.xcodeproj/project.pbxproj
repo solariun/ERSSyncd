@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67607B652069334500578F21 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67607B642069334500578F21 /* main.cpp */; };
+		6749DFD9206B001A00DC14B7 /* libLibSolar++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6749DFDA206B001A00DC14B7 /* libLibSolar++.a */; };
+		67D28BE92069A9D8006B5924 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67D28BE82069A9D8006B5924 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6749DFDA206B001A00DC14B7 /* libLibSolar++.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libLibSolar++.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67607B612069334500578F21 /* ERSSyncd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ERSSyncd; sourceTree = BUILT_PRODUCTS_DIR; };
-		67607B642069334500578F21 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		67D28BE82069A9D8006B5924 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6749DFD9206B001A00DC14B7 /* libLibSolar++.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 			children = (
 				67607B632069334500578F21 /* ERSSyncd */,
 				67607B622069334500578F21 /* Products */,
+				676A786F206AE6B60028E656 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +61,17 @@
 		67607B632069334500578F21 /* ERSSyncd */ = {
 			isa = PBXGroup;
 			children = (
-				67607B642069334500578F21 /* main.cpp */,
+				67D28BE82069A9D8006B5924 /* main.cpp */,
 			);
 			path = ERSSyncd;
+			sourceTree = "<group>";
+		};
+		676A786F206AE6B60028E656 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6749DFDA206B001A00DC14B7 /* libLibSolar++.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67607B652069334500578F21 /* main.cpp in Sources */,
+				67D28BE92069A9D8006B5924 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +244,14 @@
 		67607B692069334500578F21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "/desenv/xworkspace/LibSolar++/";
+				LIBRARY_SEARCH_PATHS = "/desenv/xworkspace/LibSolar++/";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -240,7 +259,14 @@
 		67607B6A2069334500578F21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "/desenv/xworkspace/LibSolar++/";
+				LIBRARY_SEARCH_PATHS = "/desenv/xworkspace/LibSolar++/";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
