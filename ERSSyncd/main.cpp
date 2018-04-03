@@ -74,12 +74,12 @@ int main(int argc, char * const argv [])
         printf ("Non-option argument %s\n", argv[index]);
     
     
-    regex regexINI (".*(ini|INI)");
+    regex regexINI ("(ini|INI)$");
     string strFileName; 
     
     cerr << "Loking into: " << argv [argc-1] << endl;
     
-    if (regex_match (argv [argc-1], regexINI))
+    if (regex_search (argv [argc-1], regexINI))
     {
         strFileName = argv [argc-1];
     }

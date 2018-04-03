@@ -255,6 +255,10 @@
 				HEADER_SEARCH_PATHS = "/desenv/xworkspace/LibSolar++/";
 				LIBRARY_SEARCH_PATHS = "/desenv/xworkspace/LibSolar++/";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = (
+					"$(OTHER_CFLAGS)",
+					"-D_DEBUG",
+				);
 				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
