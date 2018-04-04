@@ -18,6 +18,7 @@
 #include "iniplus.hpp"
 #include "MetaException.hpp"
 
+iniplus *iniConf = nullptr;
 
 
 bool cmdOptionExists(char** begin, char** end, const std::string& option)
@@ -93,13 +94,25 @@ int main(int argc, char * const argv [])
     try
     {
         
-        iniplus iniConf (strFileName.c_str());
+        iniConf = new iniplus  (strFileName.c_str());
+
+        cerr << "Value of Global.WorkingDirectory: " << iniConf->getString("Global.WorkingDirectory") << endl << endl;
+        
+        cerr << "Conversion Test: hex [" << iniConf->getString("Global.ValueOf") << "] :: [" << iniConf->getLongLong("Global.ValueOf") << "]" << endl << endl;
+        
+         cerr << "Conversion Test: bin [" << iniConf->getString("Global.Flags") << "] :: [" << iniConf->getULongLongFromBinary ("Global.Flags") << "]" << endl << endl;
+        
+        cerr << "Nume Value of  : [" << iniConf->getLongLong("Sync_Vivo_Tim_Huawei_Performance.RentationDays") << "]" << endl << endl;
         
     } catch (MetaException* metaEx)
     {
         cerr << "mensagem: " << metaEx->getExMessage() << endl;
     }
     
+    if (iniConf != nullptr)
+    {
+        delete iniConf;
+    }
     
     return 0;
 }
