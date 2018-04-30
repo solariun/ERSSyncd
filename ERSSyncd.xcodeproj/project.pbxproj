@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		678DF286207501AA00BFB669 /* StringPrettify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 678DF284207501AA00BFB669 /* StringPrettify.cpp */; };
+		678DF289207501D800BFB669 /* Tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 678DF287207501D800BFB669 /* Tests.cpp */; };
 		6795E5FB206BC0700043F7EE /* libLibSolar++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6795E5FC206BC0700043F7EE /* libLibSolar++.a */; };
 		67D28BE92069A9D8006B5924 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67D28BE82069A9D8006B5924 /* main.cpp */; };
 /* End PBXBuildFile section */
@@ -25,6 +27,10 @@
 
 /* Begin PBXFileReference section */
 		67607B612069334500578F21 /* ERSSyncd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ERSSyncd; sourceTree = BUILT_PRODUCTS_DIR; };
+		678DF284207501AA00BFB669 /* StringPrettify.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringPrettify.cpp; sourceTree = "<group>"; };
+		678DF285207501AA00BFB669 /* StringPrettify.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringPrettify.hpp; sourceTree = "<group>"; };
+		678DF287207501D800BFB669 /* Tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tests.cpp; sourceTree = "<group>"; };
+		678DF288207501D800BFB669 /* Tests.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tests.hpp; sourceTree = "<group>"; };
 		6795E5FC206BC0700043F7EE /* libLibSolar++.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libLibSolar++.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6795E5FF206C1FF90043F7EE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6795E600206C1FF90043F7EE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -66,6 +72,10 @@
 			isa = PBXGroup;
 			children = (
 				67D28BE82069A9D8006B5924 /* main.cpp */,
+				678DF284207501AA00BFB669 /* StringPrettify.cpp */,
+				678DF285207501AA00BFB669 /* StringPrettify.hpp */,
+				678DF287207501D800BFB669 /* Tests.cpp */,
+				678DF288207501D800BFB669 /* Tests.hpp */,
 			);
 			path = ERSSyncd;
 			sourceTree = "<group>";
@@ -135,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678DF289207501D800BFB669 /* Tests.cpp in Sources */,
 				67D28BE92069A9D8006B5924 /* main.cpp in Sources */,
+				678DF286207501AA00BFB669 /* StringPrettify.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

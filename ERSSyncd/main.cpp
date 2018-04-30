@@ -18,6 +18,8 @@
 #include "iniplus.hpp"
 #include "MetaException.hpp"
 
+#include "Tests.hpp"
+
 iniplus *iniConf = nullptr;
 
 
@@ -75,44 +77,7 @@ int main(int argc, char * const argv [])
         printf ("Non-option argument %s\n", argv[index]);
     
     
-    regex regexINI ("(ini|INI)$");
-    string strFileName; 
-    
-    cerr << "Loking into: " << argv [argc-1] << endl;
-    
-    if (regex_search (argv [argc-1], regexINI))
-    {
-        strFileName = argv [argc-1];
-    }
-    else
-    {
-        strFileName = "/desenv/samples/ERSSync.ini";
-    }
+    Tests::executeTests(argc, argv);
 
-    cerr << "Setting up to use INI: [" << strFileName << "]"  << endl;
-    
-    try
-    {
-        
-        iniConf = new iniplus  (strFileName.c_str());
-
-        cerr << "Value of Global.WorkingDirectory: " << iniConf->getString("Global.WorkingDirectory") << endl << endl;
-        
-        cerr << "Conversion Test: hex [" << iniConf->getString("Global.ValueOf") << "] :: [" << iniConf->getLongLong("Global.ValueOf") << "]" << endl << endl;
-        
-         cerr << "Conversion Test: bin [" << iniConf->getString("Global.Flags") << "] :: [" << iniConf->getULongLongFromBinary ("Global.Flags") << "]" << endl << endl;
-        
-        cerr << "Nume Value of  : [" << iniConf->getLongLong("Sync_Vivo_Tim_Huawei_Performance.RentationDays") << "]" << endl << endl;
-        
-    } catch (MetaException* metaEx)
-    {
-        cerr << "mensagem: " << metaEx->getExMessage() << endl;
-    }
-    
-    if (iniConf != nullptr)
-    {
-        delete iniConf;
-    }
-    
     return 0;
 }
