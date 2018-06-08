@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6749A68420975DD0009EBD4E /* ERSSync.ini */ = {isa = PBXFileReference; lastKnownFileType = text; path = ERSSync.ini; sourceTree = "<group>"; };
 		67607B612069334500578F21 /* ERSSyncd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ERSSyncd; sourceTree = BUILT_PRODUCTS_DIR; };
 		678DF284207501AA00BFB669 /* StringPrettify.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringPrettify.cpp; sourceTree = "<group>"; };
 		678DF285207501AA00BFB669 /* StringPrettify.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringPrettify.hpp; sourceTree = "<group>"; };
@@ -49,9 +50,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6749A68320975DB1009EBD4E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6749A68420975DD0009EBD4E /* ERSSync.ini */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		67607B582069334500578F21 = {
 			isa = PBXGroup;
 			children = (
+				6749A68320975DB1009EBD4E /* Resources */,
 				6795E600206C1FF90043F7EE /* LICENSE */,
 				6795E5FF206C1FF90043F7EE /* README.md */,
 				67607B632069334500578F21 /* ERSSyncd */,
@@ -114,7 +124,7 @@
 		67607B592069334500578F21 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "GUSTAVO CAMPOS";
 				TargetAttributes = {
 					67607B602069334500578F21 = {
@@ -168,6 +178,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -175,6 +186,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -223,6 +235,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -230,6 +243,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

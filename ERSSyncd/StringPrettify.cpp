@@ -21,6 +21,49 @@ StringPrettify::StringPrettify (iniplus* iniConf) : iniConf(iniConf)
 }
 
 
+map<string, string>::iterator StringPrettify::getSafeVarIterator (const string& strVarName)
+{
+    return  mapVariable.find(strVarName);;
+}
+
+
+map<string, string>::iterator StringPrettify::getVarIterator (const string& strVarName)
+{
+    map<string,string>::iterator mapPos = getSafeVarIterator(strVarName);
+    
+    VERIFY (mapPos != mapVariable.end(), EXCEPT_PRETTY_VAR_NOT_FOUND, (str + "Error, Variable not found.  (" + strVarName + ")").c_str());
+    
+    return mapPos;
+}
+
+
+void StringPrettify::updateVariable (const string& strVarName, const string& strValue)
+{
+    map<string,string>::iterator mapPos = getSafeVarIterator(strVarName);
+    
+    try
+    {
+        if (mapPos != mapVariable.end())
+        {
+            mapVariable [strVarName] = strValue;
+        }
+        else
+        {
+            mapVariable.insert (pair<string,string>(strVarName, strValue));
+        }
+    } catch (exception ex)
+    {
+        throw new MetaException("StringPrettify", EXCEPT_PRETTY_VAR_INSERT_ERROR, str + "Error, no new " + ex.what());
+    }
+    
+}
+
+string StringPrettify::getVariableValue (const string& strVarName)
+{
+    map<string,string>::iterator mapPos = getVarIterator (strVarName);
+    
+    return mapPos->second;
+}
 
 string StringPrettify::process (const string strStringBase)
 {
@@ -136,47 +179,5 @@ string StringPrettify::call (const string strIniPath)
 
 
 
-map<string, string>::iterator StringPrettify::getSafeVarIterator (const string& strVarName)
-{
-    return  mapVariable.find(strVarName);;
-}
 
-
-map<string, string>::iterator StringPrettify::getVarIterator (const string& strVarName)
-{
-    map<string,string>::iterator mapPos = getSafeVarIterator(strVarName);
-    
-    VERIFY (mapPos != mapVariable.end(), EXCEPT_PRETTY_VAR_NOT_FOUND, (str + "Error, Variable not found.  (" + strVarName + ")").c_str());
-    
-    return mapPos;
-}
-
-
-void StringPrettify::updateVariable (const string& strVarName, const string& strValue)
-{
-     map<string,string>::iterator mapPos = getSafeVarIterator(strVarName);
-    
-    try
-    {
-        if (mapPos != mapVariable.end())
-        {
-            mapVariable [strVarName] = strValue;
-        }
-        else
-        {
-            mapVariable.insert (pair<string,string>(strVarName, strValue));
-        }
-    } catch (exception ex)
-    {
-        throw new MetaException("StringPrettify", EXCEPT_PRETTY_VAR_INSERT_ERROR, str + "Error, no new " + ex.what());
-    }
-    
-}
-
-string StringPrettify::getVariableValue (const string& strVarName)
-{
-    map<string,string>::iterator mapPos = getVarIterator (strVarName);
-    
-    return mapPos->second;
-}
 

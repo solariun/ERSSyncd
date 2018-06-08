@@ -29,13 +29,14 @@ protected:
     map<string, string>::iterator getVarIterator (const string& strVarName);
 
     map<string, string>::iterator getSafeVarIterator (const string& strVarName);
-
+    
+    string call (const string pszIniPath);
     
 public:
     StringPrettify (iniplus* iniConf);
     
     string process (const string strStringBase);
-    string call (const string pszIniPath);
+
     
     void updateVariable (const string& strVarName, const string& strValue);
     string getVariableValue (const string& strVarName);
