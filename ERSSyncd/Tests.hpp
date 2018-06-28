@@ -19,7 +19,6 @@
 #include <string>
 
 #include "iniplus.hpp"
-#include "MetaException.hpp"
 #include "StringPrettify.hpp"
 
 #endif /* Tests_hpp */

@@ -53,9 +53,9 @@ void Tests::executeTests (int argc, char * const argv [])
         
         strPrettify.process("_${NE_NAME}/ransharing02/tim/vivo/ericsson/performance/SubNetwork=ONRM_ROOT_MO/MeContext=<${NE_NAME}>/");
         
-    } catch (MetaException* metaEx)
+    } catch (Exception& metaEx)
     {
-        cerr << "mensagem: " << metaEx->getExMessage() << endl;
+        cerr << "mensagem: " << metaEx.what() << endl;
     }
     
     if (iniConf != nullptr)

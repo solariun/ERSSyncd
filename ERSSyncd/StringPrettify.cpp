@@ -53,7 +53,7 @@ void StringPrettify::updateVariable (const string& strVarName, const string& str
         }
     } catch (exception ex)
     {
-        throw new MetaException("StringPrettify", EXCEPT_PRETTY_VAR_INSERT_ERROR, str + "Error, no new " + ex.what());
+        throw Exception("StringPrettify", str + "Error, no new " + ex.what(), EXCEPT_PRETTY_VAR_INSERT_ERROR);
     }
     
 }
