@@ -278,8 +278,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = "/desenv/xworkspace/LibSolar++/";
-				LIBRARY_SEARCH_PATHS = "/desenv/xworkspace/LibSolar++/";
+				HEADER_SEARCH_PATHS = "/desenv/xworkspace/LibSolar-/";
+				LIBRARY_SEARCH_PATHS = "/desenv/xworkspace/LibSolar-/";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				"OTHER_CPLUSPLUSFLAGS[arch=*]" = (
 					"$(OTHER_CFLAGS)",
@@ -297,8 +297,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = "/desenv/xworkspace/LibSolar++/";
-				LIBRARY_SEARCH_PATHS = "/desenv/xworkspace/LibSolar++/";
+				HEADER_SEARCH_PATHS = "/desenv/xworkspace/LibSolar-/";
+				LIBRARY_SEARCH_PATHS = "/desenv/xworkspace/LibSolar-/";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
