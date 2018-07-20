@@ -8,8 +8,8 @@
 
 #include "Tests.hpp"
 
-
 extern iniplus *iniConf;
+
 
 void Tests::executeTests (int argc, char * const argv [])
 {
@@ -39,12 +39,12 @@ void Tests::executeTests (int argc, char * const argv [])
         
         //cerr << iniConf->getULongLongFromBinary  ("TESTS.Value_4") << endl;
         
-        VERIFY (iniConf->getLong ("TESTS.Value_1") == 1, ++nCount, "Error, no Long returned");
-        VERIFY (iniConf->getInteger ("TESTS.Value_2") == 2, ++nCount, "Error, no Integer returned");
-        VERIFY (iniConf->getLong  ("TESTS.Value_3") == 0xfaaf3, ++nCount, "Error, no Long returned");
-        VERIFY (iniConf->getULongLongFromBinary  ("TESTS.Value_4") == 81593, ++nCount, "Error, no valid binary convertion");
+        VERIFY (iniConf->getLong ("TESTS.Value_1") == 1, "Error, no Long returned", );
+        VERIFY (iniConf->getInteger ("TESTS.Value_2") == 2, "Error, no Integer returned", );
+        VERIFY (iniConf->getLong  ("TESTS.Value_3") == 0xfaaf3,  "Error, no Long returned, ", );
+        VERIFY (iniConf->getULongLongFromBinary  ("TESTS.Value_4") == 81593,  "Error, no valid binary convertion", );
         
-        VERIFY (iniConf->getDouble ("TESTS.Level_1.Level_2.Value_1") == 10.34f, ++nCount, "Error, no float on multi-level returned");
+        VERIFY (iniConf->getDouble ("TESTS.Level_1.Level_2.Value_1") == 10.34f, "Error, no float on multi-level returned", );
 
         
         StringPrettify strPrettify (iniConf);

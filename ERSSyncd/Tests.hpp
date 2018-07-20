@@ -18,8 +18,10 @@
 #include <regex>
 #include <string>
 
-#include "iniplus.hpp"
+#include <iniplus.hpp>
+
 #include "StringPrettify.hpp"
+
 
 #endif /* Tests_hpp */
 

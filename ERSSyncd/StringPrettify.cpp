@@ -7,13 +7,19 @@
 //
 
 #include "StringPrettify.hpp"
+#include <Exception.hpp>
+#include <iniplus.hpp>
+
 #include <sstream>
 #include <queue>
 #include <vector>
 #include <regex>
 
-
 static const string str = "";
+
+StringPrettifyException::StringPrettifyException (std::string strMessage, uint nErrorID): Exception ("iniplus", strMessage, nErrorID)
+{}
+
 
 StringPrettify::StringPrettify (iniplus* iniConf) : iniConf(iniConf)
 {
@@ -31,7 +37,7 @@ map<string, string>::iterator StringPrettify::getVarIterator (const string& strV
 {
     map<string,string>::iterator mapPos = getSafeVarIterator(strVarName);
     
-    VERIFY (mapPos != mapVariable.end(), EXCEPT_PRETTY_VAR_NOT_FOUND, (str + "Error, Variable not found.  (" + strVarName + ")").c_str());
+    Verify (mapPos != mapVariable.end(), (str + "Error, Variable not found.  (" + strVarName + ")").c_str(), EXCEPT_PRETTY_VAR_NOT_FOUND, StringPrettifyException);
     
     return mapPos;
 }

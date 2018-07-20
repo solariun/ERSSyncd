@@ -12,12 +12,20 @@
 #include <stdio.h>
 #include <map>
 
-#include "iniplus.hpp"
+#include <iniplus.hpp>
+#include <Exception.hpp>
 
 
 #define EXCEPT_PRETTY_VAR_NOT_FOUND             300
 #define EXCEPT_PRETTY_VAR_INSERT_ERROR          301
 #define EXCEPT_PRETTY_VAR_PARAMS_COUNT_ERR      302
+
+class StringPrettifyException : public Exception
+{
+public:
+    StringPrettifyException (std::string strMessage, uint nErrorID);
+};
+
 
 
 class StringPrettify
