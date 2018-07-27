@@ -153,7 +153,7 @@ string StringPrettify::call (const string strIniPath)
     
     for (int nCount=1; iniConf->Exists((strIniPath + ".Steps." + to_string(nCount)).c_str()); nCount++)
     {
-        strProcData = iniConf->getString((strIniPath + ".Steps." + to_string(nCount)).c_str());
+        strProcData = iniConf->getRawString((strIniPath + ".Steps." + to_string(nCount)).c_str());
         
         TRACE << "Retriving: Steps." << nCount << ": " << strProcData << endl;
         
